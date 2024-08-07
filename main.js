@@ -17,7 +17,7 @@ app.post('/', async function (req, res) {
     });
   } catch (error) {
     res.send({
-      message: "Something went wrong"
+      message: "Something went wrong "+error.message
     })
   } finally {
     if (browser) await browser.close();
